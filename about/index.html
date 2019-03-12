@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Our Locations – MJ's Brasserie</title><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="../wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="pinboard-web-font-css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic%7COswald:300,300italic,regular,italic,600,600italic&subset=latin" type="text/css" media="all"><link rel="stylesheet" id="pinboard-css" href="../wp-content/themes/pinboard/style.css" type="text/css" media="all"><link rel="stylesheet" id="colorbox-css" href="../wp-content/themes/pinboard/styles/colorbox.css" type="text/css" media="all"><script type="text/javascript" src="../wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="../wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="../wp-content/themes/pinboard/scripts/ios-orientationchange-fix.js"></script><script type="text/javascript" src="../wp-content/themes/pinboard/scripts/jquery.flexslider-min.js"></script><script type="text/javascript" src="../wp-content/themes/pinboard/scripts/jquery.fitvids.js"></script><script type="text/javascript">
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script><script type="text/javascript" src="../wp-includes/js/mediaelement/mediaelement-and-player.min.js"></script><script type="text/javascript" src="../wp-includes/js/mediaelement/mediaelement-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script><script type="text/javascript" src="../wp-content/themes/pinboard/scripts/jquery.colorbox-min.js"></script><script>
+/* <![CDATA[ */
+	jQuery(window).load(function() {
+			});
+	jQuery(document).ready(function($) {
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-header', container).append(meta);
+				else
+					$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .hentry').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .hentry, .page-template-template-blog-full-width-php #content .hentry, .page-template-template-blog-four-col-php #content .hentry').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .hentry').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow">');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+				$('.entry-attachment audio, .entry-attachment video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe[src*='wordpress.tv'], iframe[src*='www.dailymotion.com'], iframe[src*='blip.tv'], iframe[src*='www.viddler.com']"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script><style type="text/css">
+							#wrapper {
+			background: #f5ecc5;
+		}
+				#header {
+			border-color: #743e33;
+		}
+		#access {
+			background: #743e33;
+		}
+		@media screen and (max-width: 760px) {
+			#access {
+				background: none;
+			}
+		}
+									#copyright {
+			background: #743e33;
+		}
+																																#site-title img {
+margin: 0;
+}
+
+#site-title {
+line-height: 120px;
+}
+
+#social-media-icons {
+margin-top: 49px;
+}
+
+#slider {
+padding: 7px;
+}
+
+</style><style type="text/css">
+	#site-title .home,
+	#site-description {
+		position:absolute !important;
+		clip:rect(1px, 1px, 1px, 1px);
+	}
+</style></head><body class="page-template page-template-template-full-width page-template-template-full-width-php page page-id-2">
+	<div id="wrapper">
+		<header id="header"><div id="site-title">
+									<a href="../index.html" rel="home">
+						<img src="http://mjsbrasserie.uk/wp-content/uploads/2016/04/header-transparent.png" alt="MJ's Brasserie" width="577" height="130"></a>
+								<a class="home" href="../index.html" rel="home">MJ's Brasserie</a>
+			</div>
+							<div id="site-description"></div>
+						
+		<div id="social-media-icons">
+							<a class="social-media-icon facebook" href="https://www.facebook.com/MJs-Brasserie-253269075005410">Facebook</a>
+									<a class="social-media-icon twitter" href="https://twitter.com/mjsbrasserie">Twitter</a>
+																										</div>
+				<div class="clear"></div>
+			<nav id="access"><a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-61"><a href="../index.html">Home</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-62"><a href="../about/index.html" aria-current="page">Our Locations</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="../wp-content/uploads/2017/05/breakfast-menu.pdf">Breakfast Menu</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="../wp-content/uploads/2017/05/pollokshields-menu.pdf">Pollokshields Menu</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79"><a href="../wp-content/uploads/2017/05/williamwood-menu.pdf">Williamwood Menu</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="../wp-content/uploads/2017/05/kids-menu.pdf">Kids Menu</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a href="../wp-content/uploads/2016/03/drinks-menu.pdf">Drinks Menu</a></li>
+</ul></div>				<div class="clear"></div>
+			</nav></header><div id="container">
+		<section id="content" class="column onecol"><article class="post-2 page type-page status-publish hentry column onecol" id="post-2"><div class="entry">
+						<header class="entry-header"><h1 class="entry-title">Our Locations</h1>
+						</header><div class="entry-content">
+							<table><tr><td>
+<h3>Moyra Janes – Pollokshields</h3>
+<p>20 Kildrostan Street<br>
+Glasgow<br>
+G41 4LU<br>
+Tel: 0141 423 5628</p>
+<h4>Opening times</h4>
+<p><strong>Monday</strong> 9.00am – 5.00pm <em>(last food orders 4.30pm)</em><br><strong>Tuesday – Saturday</strong> 9.00am – 10.00pm <em>(last food orders 9.00pm)</em><br><strong>Sunday</strong> 10.00am – 5.00pm <em>(last food orders 4.30pm)</em>
+</p></td>
+<td>
+<h3>MJ’s Brasserie – Williamwood</h3>
+<p>65 Seres Rd<br>
+Glasgow<br>
+G76 7PG<br>
+Tel: 0141 638 2061</p>
+<h4>Opening times</h4>
+<p><strong>Monday – Thursday</strong> 9.00am – 5.00pm <em>(Last food orders 4.30pm)</em><br><strong>Friday & Saturday</strong> 9.00am – 10.00pm <em>(Last food orders 9.00pm)</em><br><strong>Sunday</strong> 10.00am – 5.00pm <em>(Last food orders 4.30pm)</em>
+</p></td>
+</tr></table><div id="wpgmza_map" style="display:block; overflow:auto; width:100%; height:300px; margin-left:auto !important; margin-right:auto; !important; align:center;">
+            
+            </div>
+        
+							<div class="clear"></div>
+						</div>
+											</div>
+					
+
+				</article></section><div class="clear"></div>
+	</div>
+				<div id="footer">
+						<div id="copyright">
+				<p class="copyright twocol">© 2019 MJ's Brasserie</p>
+								<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+<link rel="stylesheet" id="wpgmaps-style-css" href="../wp-content/plugins/wp-google-maps/css/wpgmza_style.css" type="text/css" media="1"><style id="wpgmaps-style-inline-css" type="text/css">
+.wpgmza_map img { max-width:none; } .wpgmza_widget { overflow: auto; }
+</style><script type="text/javascript" src="../wp-includes/js/mediaelement/wp-mediaelement.min.js"></script><script type="text/javascript" src="//maps.google.com/maps/api/js?v=3.25&key=AIzaSyCgI2Y0zV-yT2l1unzMy7kSCZWiboXqZKE&language=en"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpgmaps_mapid = "1";
+var wpgmaps_localize = {"1":{"id":"1","map_title":"MJ\\'s Brasserie","map_width":"100","map_height":"300","map_start_lat":"55.816079","map_start_lng":"-4.306087","map_start_location":"55.816079021161535,-4.306086954101611","map_start_zoom":"11","default_marker":"0","type":"1","alignment":"2","directions_enabled":"1","styling_enabled":"0","styling_json":"","active":"0","kml":"","bicycle":"2","traffic":"2","dbox":"1","dbox_width":"250","listmarkers":"0","listmarkers_advanced":"0","filterbycat":"0","ugm_enabled":"0","ugm_category_enabled":"0","fusion":"","map_width_type":"%","map_height_type":"px","mass_marker_support":"1","ugm_access":"0","order_markers_by":"1","order_markers_choice":"2","show_user_location":"0","default_to":"","other_settings":{"store_locator_enabled":2,"store_locator_distance":1,"store_locator_bounce":1,"store_locator_query_string":"","wpgmza_store_locator_restrict":"GB","map_max_zoom":"1","transport_layer":2,"wpgmza_theme_data":""}}};
+var wpgmaps_localize_polygon_settings = [];
+var wpgmaps_localize_polyline_settings = [];
+var wpgmaps_markerurl = "\/\/PLACEHOLDER.wpsho\/wp-content\/uploads\/wp-google-maps\/1markers.xml";
+var wpgmaps_localize_marker_data = {"5":{"map_id":"1","marker_id":"5","title":"","address":"MJ's Brasserie, 65 Seres Rd, Clarkston, Clarkston, Glasgow, Renfrewshire G76 7PG","desc":"","pic":"","icon":"","linkd":"","lat":"55.792339","lng":"-4.289250","anim":"0","retina":"0","category":"","infoopen":"0","other_data":""},"6":{"map_id":"1","marker_id":"6","title":"","address":"MJ's Brasserie, 18-20 Kildrostan St, Glasgow, Glasgow City G41 4LU","desc":"","pic":"","icon":"","linkd":"","lat":"55.838127","lng":"-4.274501","anim":"0","retina":"0","category":"","infoopen":"0","other_data":""}};
+var wpgmaps_localize_global_settings = {"wpgmza_settings_map_open_marker_by":"1","wpgmza_api_version":"3.25","wpgmza_custom_css":"","wpgmza_settings_access_level":"manage_options","wpgmza_settings_marker_pull":"0"};
+var wpgmaps_lang_km_away = "km away";
+var wpgmaps_lang_m_away = "miles away";
+/* ]]> */
+</script><script type="text/javascript" src="../wp-content/plugins/wp-google-maps/js/wpgmaps.js"></script></body></html>

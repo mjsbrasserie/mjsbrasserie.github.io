@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MJ’s Pollokshields – MJ's Brasserie</title><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="../../wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="pinboard-web-font-css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic%7COswald:300,300italic,regular,italic,600,600italic&subset=latin" type="text/css" media="all"><link rel="stylesheet" id="pinboard-css" href="../../wp-content/themes/pinboard/style.css" type="text/css" media="all"><link rel="stylesheet" id="colorbox-css" href="../../wp-content/themes/pinboard/styles/colorbox.css" type="text/css" media="all"><script type="text/javascript" src="../../wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="../../wp-content/themes/pinboard/scripts/ios-orientationchange-fix.js"></script><script type="text/javascript" src="../../wp-content/themes/pinboard/scripts/jquery.flexslider-min.js"></script><script type="text/javascript" src="../../wp-content/themes/pinboard/scripts/jquery.fitvids.js"></script><script type="text/javascript">
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script><script type="text/javascript" src="../../wp-includes/js/mediaelement/mediaelement-and-player.min.js"></script><script type="text/javascript" src="../../wp-includes/js/mediaelement/mediaelement-migrate.min.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script><script type="text/javascript" src="../../wp-content/themes/pinboard/scripts/jquery.colorbox-min.js"></script><script>
+/* <![CDATA[ */
+	jQuery(window).load(function() {
+			});
+	jQuery(document).ready(function($) {
+		$('#access .menu > li > a').each(function() {
+			var title = $(this).attr('title');
+			if(typeof title !== 'undefined' && title !== false) {
+				$(this).append('<br /> <span>'+title+'');
+				$(this).removeAttr('title');
+			}
+		});
+		function pinboard_move_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-container', container).before(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-container', container).before(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-container', container).before(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-container', container).after(meta);
+			}
+		}
+		function pinboard_restore_elements(container) {
+			if( container.hasClass('onecol') ) {
+				var thumb = $('.entry-thumbnail', container);
+				if('undefined' !== typeof thumb)
+					$('.entry-header', container).after(thumb);
+				var video = $('.entry-attachment', container);
+				if('undefined' !== typeof video)
+					$('.entry-header', container).after(video);
+				var gallery = $('.post-gallery', container);
+				if('undefined' !== typeof gallery)
+					$('.entry-header', container).after(gallery);
+				var meta = $('.entry-meta', container);
+				if('undefined' !== typeof meta)
+					$('.entry-header', container).append(meta);
+				else
+					$('.entry-header', container).html(meta.html());
+			}
+		}
+		if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+			// Viewport is greater than tablet: portrait
+		} else {
+			$('#content .hentry').each(function() {
+				pinboard_move_elements($(this));
+			});
+		}
+		$(window).resize(function() {
+			if( ($(window).width() > 960) || ($(document).width() > 960) ) {
+									$('.page-template-template-full-width-php #content .hentry, .page-template-template-blog-full-width-php #content .hentry, .page-template-template-blog-four-col-php #content .hentry').each(function() {
+						pinboard_restore_elements($(this));
+					});
+							} else {
+				$('#content .hentry').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					if(parseInt($(this).css('height'))>maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+			} else {
+				$('#access .menu > li > a').css('height', 'auto');
+			}
+		});
+		if( ($(window).width() > 760) || ($(document).width() > 760) ) {
+			var maxh = 0;
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if(typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>'+title+'');
+					$(this).removeAttr('title');
+				}
+				if(parseInt($(this).css('height'))>maxh) {
+					maxh = parseInt($(this).css('height'));
+				}
+			});
+			$('#access .menu > li > a').css('height', maxh);
+							$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+					} else {
+			$('#access li').each(function() {
+				if($(this).children('ul').length)
+					$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow">');
+			});
+			$('.drop-down-toggle').click(function() {
+				$(this).parent().children('ul').slideToggle(250);
+			});
+		}
+				$('.entry-attachment audio, .entry-attachment video').mediaelementplayer({
+			videoWidth: '100%',
+			videoHeight: '100%',
+			audioWidth: '100%',
+			alwaysShowControls: true,
+			features: ['playpause','progress','tracks','volume'],
+			videoVolume: 'horizontal'
+		});
+		$(".entry-attachment, .entry-content").fitVids({ customSelector: "iframe[src*='wordpress.tv'], iframe[src*='www.dailymotion.com'], iframe[src*='blip.tv'], iframe[src*='www.viddler.com']"});
+	});
+	jQuery(window).load(function() {
+					jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+			});
+/* ]]> */
+</script><style type="text/css">
+							#wrapper {
+			background: #f5ecc5;
+		}
+				#header {
+			border-color: #743e33;
+		}
+		#access {
+			background: #743e33;
+		}
+		@media screen and (max-width: 760px) {
+			#access {
+				background: none;
+			}
+		}
+									#copyright {
+			background: #743e33;
+		}
+																																#site-title img {
+margin: 0;
+}
+
+#site-title {
+line-height: 120px;
+}
+
+#social-media-icons {
+margin-top: 49px;
+}
+
+#slider {
+padding: 7px;
+}
+
+</style><style type="text/css">
+	#site-title .home,
+	#site-description {
+		position:absolute !important;
+		clip:rect(1px, 1px, 1px, 1px);
+	}
+</style></head><body class="post-template-default single single-post postid-53 single-format-standard page-template-template-full-width-php">
+	<div id="wrapper">
+		<header id="header"><div id="site-title">
+									<a href="../../index.html" rel="home">
+						<img src="http://mjsbrasserie.uk/wp-content/uploads/2016/04/header-transparent.png" alt="MJ's Brasserie" width="577" height="130"></a>
+								<a class="home" href="../../index.html" rel="home">MJ's Brasserie</a>
+			</div>
+							<div id="site-description"></div>
+						
+		<div id="social-media-icons">
+							<a class="social-media-icon facebook" href="https://www.facebook.com/MJs-Brasserie-253269075005410">Facebook</a>
+									<a class="social-media-icon twitter" href="https://twitter.com/mjsbrasserie">Twitter</a>
+																										</div>
+				<div class="clear"></div>
+			<nav id="access"><a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-61"><a href="../../index.html">Home</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="../../about/index.html">Our Locations</a></li>
+<li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="../../wp-content/uploads/2017/05/breakfast-menu.pdf">Breakfast Menu</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="../../wp-content/uploads/2017/05/pollokshields-menu.pdf">Pollokshields Menu</a></li>
+<li id="menu-item-79" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-79"><a href="../../wp-content/uploads/2017/05/williamwood-menu.pdf">Williamwood Menu</a></li>
+<li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="../../wp-content/uploads/2017/05/kids-menu.pdf">Kids Menu</a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25"><a href="../../wp-content/uploads/2016/03/drinks-menu.pdf">Drinks Menu</a></li>
+</ul></div>				<div class="clear"></div>
+			</nav></header><div id="container">
+		<section id="content" class="column onecol"><article class="post-53 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized column onecol" id="post-53"><div class="entry">
+						<header class="entry-header"><h1 class="entry-title">MJ’s Pollokshields</h1>
+									<aside class="entry-meta"><span class="entry-author-link"><a href="../../author/murray/index.html" title="Posts by murray" rel="author">murray</a></span>
+									<span class="entry-date">20th March 2016</span>
+												<span class="entry-category"><a href="../../category/uncategorized/index.html" rel="category tag">Uncategorized</a></span>
+																		<div class="clear"></div>
+		</aside></header><div class="entry-content">
+																					<div class="clear"></div>
+						</div>
+						<footer class="entry-utility"><div class="social-bookmarks">
+			<p>Did you like this article? Share it with your friends!</p>
+							<div class="facebook-like">
+					<div id="fb-root"></div>
+					<script>
+						(function(d, s, id) {
+							var js, fjs = d.getElementsByTagName(s)[0];
+							if (d.getElementById(id)) return;
+							js = d.createElement(s); js.id = id;
+							js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+							fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));
+					</script><div class="fb-like" data-href="http://OFFLINEZIP.wpsho/uncategorized/mjs-pollokshields/" data-send="false" data-layout="button_count" data-width="110" data-show-faces="false" data-font="arial"></div>
+				</div>
+										<div class="twitter-button">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://OFFLINEZIP.wpsho/uncategorized/mjs-pollokshields/">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+												<div class="clear"></div>
+		</div>
+														</footer></div>
+					
+
+				</article></section></div>
+				<div id="footer">
+						<div id="copyright">
+				<p class="copyright twocol">© 2019 MJ's Brasserie</p>
+								<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="../../wp-includes/js/mediaelement/wp-mediaelement.min.js"></script></body></html>
